@@ -27,6 +27,7 @@ class StudentsController < ApplicationController
     # else
     #   @student = Student.all
     # end 
+    render 'index'
   end
 
   def student_params
