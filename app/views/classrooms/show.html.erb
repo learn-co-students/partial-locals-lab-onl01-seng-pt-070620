@@ -1,5 +1,10 @@
 Classroom Info
 <p>
-<%= @classroom.course_name %>
-<%= @classroom.semester %>
+<%= render partial: 'classroom', locals: {classroom: @classroom} %>
+
+Students:
+    <% @classroom.classroom_students.each do |c| %>
+        <li><%= render partial: 'students/student', locals: {student: c.student} %>
+    <% end %>
+
 </p>
